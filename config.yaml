@@ -1,8 +1,8 @@
-server: localhost
-instance: SQL2019
-database: myTestDB
-port: 1433
-user: squUser
-password: superSecretPassword
-outputPath: 
-outputDateMark: true
+server: localhost # server name or IP address
+instance: SQL2019 # instance name
+database: myTestDB # database name
+port: 1433 # port number
+user: myUser # user name (If empty string, Windows authentication is used)
+password: MySuperSecretPassword # password
+outputPath: # output path for the generated file "results.xlsx" (If empty string, the files are generated in the current directory)
+outputDateMark: false # add date mark to the output file names 

@@ -1,0 +1,53 @@
+name: releaseBuild
+
+on: release
+
+jobs:
+  release-windows-amd64:
+    name: release windows/amd64
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: compile and release
+        uses: mmalcek/go-release.action@v1.0.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROJECT_NAME: sqlStat
+          CGO_ENABLED: 0
+          GOARCH: amd64
+          GOOS: windows
+          CMD_PATH: -buildvcs=false
+          EXTRA_FILES: "README.md LICENSE queries/data/pooledConns.yaml queries/data/runningQueries.yaml queries/duration/getEmployees.yaml queries/duration/getUsers.yaml"
+  release-linux-amd64:
+    name: release linux/amd64
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: compile and release
+        uses: mmalcek/go-release.action@v1.0.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROJECT_NAME: sqlStat
+          CGO_ENABLED: 0
+          GOARCH: amd64
+          GOOS: linux
+          CMD_PATH: -buildvcs=false
+          EXTRA_FILES: "README.md LICENSE queries/data/pooledConns.yaml queries/data/runningQueries.yaml queries/duration/getEmployees.yaml queries/duration/getUsers.yaml"
+  release-darwin-amd64:
+    name: release darwin/amd64
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: compile and release
+        uses: mmalcek/go-release.action@v1.0.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROJECT_NAME: sqlStat
+          CGO_ENABLED: 0
+          GOARCH: amd64
+          GOOS: darwin
+          CMD_PATH: -buildvcs=false
+          EXTRA_FILES: "README.md LICENSE queries/data/pooledConns.yaml queries/data/runningQueries.yaml queries/duration/getEmployees.yaml queries/duration/getUsers.yaml"

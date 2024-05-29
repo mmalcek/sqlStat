@@ -1,8 +1,8 @@
 # sqlStat
 
-run SQL queries and collect statistics like query duration, response time witx XLSX output
+run SQL queries and collect statistics like query duration, response time with XLSX output
 
-- Currently only MSSQL is supported, but it can be easily extended to other databases
+- Currently only MSSQL is supported, but it can be easily extended for other databases
 
 ## Purpose
 
@@ -21,7 +21,7 @@ database: myTestDB # database name
 port: 1433 # port number
 user: myUser # user name (If empty string, Windows authentication is used)
 password: MySuperSecretPassword # password
-outputPath: # output path for the generated files (If empty string, the files are generated in the current directory)
+outputPath: # output path for the generated file "results.xlsx" (If empty string, the files are generated in the current directory)
 outputDateMark: false # add date mark to the output file names
 ```
 
