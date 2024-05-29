@@ -1,0 +1,6 @@
+name: Pooled conns
+query: |
+  SELECT DB_NAME(dbid) as "db", COUNT(dbid) as "count",  loginame as "user"
+  FROM sys.sysprocesses
+  WHERE dbid > 0
+  GROUP BY dbid, loginame

@@ -1,0 +1,8 @@
+server: localhost
+instance: SQL2019
+database: myTestDB
+port: 1433
+user: squUser
+password: superSecretPassword
+outputPath: 
+outputDateMark: true

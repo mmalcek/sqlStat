@@ -1,0 +1,5 @@
+name: Get all Users
+repeat: 0
+query: |
+  SELECT * FROM USERS
+  ORDER BY 1

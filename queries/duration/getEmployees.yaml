@@ -1,0 +1,5 @@
+name: Get all Employees
+repeat: 3
+query: |
+  SELECT * FROM EMPLOYEES
+  ORDER BY 1

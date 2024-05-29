@@ -1,0 +1,5 @@
+name: Running queries
+query: |
+  SELECT  "start_time", "status", "database_id", "cpu_time", "total_elapsed_time", "text"
+  FROM    sys.dm_exec_requests  
+  CROSS APPLY sys.dm_exec_sql_text(sql_handle)

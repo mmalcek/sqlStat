@@ -1,0 +1,7 @@
+*.exe
+*.exe~
+
+*.xlsx
+
+sqlStat
+.DS_Store
