@@ -1,5 +1,5 @@
 name: Get all Employees
-repeat: 3
+repeat: 12
 query: |
   SELECT * FROM EMPLOYEES
   ORDER BY 1

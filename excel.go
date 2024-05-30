@@ -106,7 +106,7 @@ func addDurationsSheet(f *excelize.File, query tQuery) error {
 	if err != nil {
 		return fmt.Errorf("error executing query: %w", err)
 	}
-	format := "mm:ss.000"
+	format := "hh:mm:ss.000"
 	xStyle, err := f.NewStyle(&excelize.Style{CustomNumFmt: &format})
 	if err != nil {
 		return fmt.Errorf("error creating style: %w", err)
