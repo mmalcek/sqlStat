@@ -10,6 +10,8 @@ In some cases you need to run SQL queries and collect statistics like query dura
 
 If SQL profiler or Extended Events is not an option, like you need to run it from application server or you don't have access to SQL Server, you can use this tool to run SQL queries and collect statistics.
 
+## Releases (Windows, MAC, Linux) [https://github.com/mmalcek/sqlStat/releases](https://github.com/mmalcek/sqlStat/releases)
+
 ## How it works
 
 - connection to SQL must be configured in config.yaml
